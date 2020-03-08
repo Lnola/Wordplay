@@ -12,11 +12,12 @@ const Input = ({
   const inputRef = useRef();
 
   useEffect(() => {
-    if (filterInput.length < 1) inputRef.current.focus();
+    if (filterInput.length < 1 && textLengthInput.length < 1)
+      inputRef.current.focus();
   });
 
   return (
-    <>
+    <section>
       <form onSubmit={submit}>
         <input
           type="text"
@@ -27,28 +28,24 @@ const Input = ({
         />
       </form>
 
-      {input.length > 2 && (
-        <form onSubmit={submit}>
-          <input
-            type="text"
-            value={filterInput}
-            placeholder="Filter - NUMBER/LETTER"
-            onChange={e => setFilterInput(e.target.value)}
-          />
-        </form>
-      )}
+      <form onSubmit={submit}>
+        <input
+          type="text"
+          value={filterInput}
+          placeholder="Filter - number/letter..."
+          onChange={e => setFilterInput(e.target.value)}
+        />
+      </form>
 
-      {input.length > 2 && (
-        <form onSubmit={submit}>
-          <input
-            type="text"
-            value={textLengthInput}
-            placeholder="Text length"
-            onChange={e => setTextLengthInput(e.target.value)}
-          />
-        </form>
-      )}
-    </>
+      <form onSubmit={submit}>
+        <input
+          type="text"
+          value={textLengthInput}
+          placeholder="Filter - word lenght..."
+          onChange={e => setTextLengthInput(e.target.value)}
+        />
+      </form>
+    </section>
   );
 };
 

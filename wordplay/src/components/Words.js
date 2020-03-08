@@ -3,11 +3,15 @@ import React from "react";
 const Words = ({ words }) => {
   return (
     <>
-      <ol>
-        {words.map((word, index) => (
-          <li key={index}>{word}</li>
-        ))}
-      </ol>
+      {words.length > 0 && (
+        <ol>
+          {words.map((word, index) => (
+            <li key={index}>
+              {index + 1}. {word}
+            </li>
+          ))}
+        </ol>
+      )}
     </>
   );
 };
