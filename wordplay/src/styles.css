@@ -1,0 +1,9 @@
+* {
+  padding: 0;
+  margin: 0;
+  max-width: 1440px;
+}
+
+ol {
+  margin-left: 50px;
+}
