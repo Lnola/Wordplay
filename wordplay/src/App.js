@@ -17,7 +17,9 @@ const App = () => {
     e.preventDefault();
 
     if (input.length > 2) {
-      setText(filterTextByInput({ input, filterInput, textLengthInput }));
+      setText(
+        filterTextByInput({ input, filterInput, textLengthInput, language })
+      );
       setInput("");
       setFilterInput("");
       setTextLengthInput("");
@@ -41,10 +43,10 @@ const App = () => {
         setTextLengthInput={setTextLengthInput}
         submit={submit}
       />
-      <div ref={textRef}>
+
+      <div className="words-wrapper" ref={textRef}>
         <Words words={text} />
       </div>
-      <span className="floater" />
     </main>
   );
 };

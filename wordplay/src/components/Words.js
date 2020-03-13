@@ -6,9 +6,7 @@ const Words = ({ words }) => {
       {words.length > 0 && (
         <ol>
           {words.map((word, index) => (
-            <li key={index}>
-              {index + 1}. {word}
-            </li>
+            <li key={index}>{word}</li>
           ))}
         </ol>
       )}

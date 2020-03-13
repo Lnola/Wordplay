@@ -1,6 +1,15 @@
-import text from "../constants/English";
+import EnglishText from "../constants/English";
+import CroatianText from "../constants/Croatian";
 
-export const filterTextByInput = ({ input, filterInput, textLengthInput }) => {
+export const filterTextByInput = ({
+  input,
+  filterInput,
+  textLengthInput,
+  language
+}) => {
+  let text = EnglishText;
+  if (language === "Croatian") text = CroatianText;
+
   input = input.toLowerCase();
   filterInput = filterInput.toLowerCase();
   textLengthInput = textLengthInput.toLowerCase();

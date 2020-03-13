@@ -8,12 +8,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+}
+
+#root {
+  width: 100%;
 }
 
 main {
   display: flex;
   align-items: center;
   flex-direction: column;
+  width: 100%;
 }
 
 ::selection {
@@ -23,12 +29,10 @@ main {
 h1 {
   color: purple;
   font-size: 80px;
-  margin-top: 30%;
-  margin-bottom: -40%;
+  margin: 50px 0;
 }
 
 section {
-  margin-top: 80%;
   background-color: white;
   padding: 50px;
   padding-top: 15px;
@@ -50,17 +54,6 @@ input {
 
 input::placeholder {
   color: rgba(128, 0, 128, 0.7);
-}
-
-.floater {
-  display: inline-block;
-  position: absolute;
-  bottom: -55%;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: purple;
-  z-index: -1;
 }
 
 article {
@@ -107,10 +100,7 @@ figcaption {
 }
 
 ol {
-  margin-top: 150px;
-  text-align: left;
-  overflow: scroll;
-  max-height: 500px;
+  margin-top: 200px;
   width: 300px;
   text-align: center;
   font-size: 20px;
@@ -123,4 +113,15 @@ ol::-webkit-scrollbar {
 li {
   color: white;
   margin-bottom: 20px;
+}
+
+.words-wrapper {
+  min-height: 300px;
+  width: 100%;
+  background-color: purple;
+  margin-top: -125px;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 60px;
 }
